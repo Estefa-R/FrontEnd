@@ -1,0 +1,8 @@
+.actualizarForm-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.actualizarForm-container > * {
+  width: 100%;
+}

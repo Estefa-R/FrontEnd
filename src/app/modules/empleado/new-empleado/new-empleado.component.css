@@ -1,0 +1,8 @@
+.empleado-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.empleado-container > * {
+  width: 100%;
+}
