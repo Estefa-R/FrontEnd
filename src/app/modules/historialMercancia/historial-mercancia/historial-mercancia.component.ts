@@ -16,6 +16,7 @@ export class HistorialMercanciaComponent implements OnInit {
     public dialog: MatDialog) { }
 
   ngOnInit(): void {
+    this.getAllHistorialMercancia();
   }
 
   displayedColumns: string[] = ['id', 'id_mercancia', 'id_empleado', 'fecha_modificacion'];
@@ -25,7 +26,8 @@ export class HistorialMercanciaComponent implements OnInit {
   paginator!: MatPaginator;
 
   getAllHistorialMercancia(){
-    this.HistorialMercanciaService.getAllHistorialMercancia().subscribe( (data:any) => {
+    this.HistorialMercanciaService.getAllHistorialMercancia()
+    .subscribe( (data:any) => {
       this.processHistorialMercanciaElementResponse(data);
     }, (error: any) => {
         console.log("error: ", error);

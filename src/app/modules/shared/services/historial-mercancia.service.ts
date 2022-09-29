@@ -13,7 +13,7 @@ export class HistorialMercanciaService {
   constructor(private http: HttpClient) { }
 
   getAllHistorialMercancia(): Observable<any>{
-    const endpoint = `${base_url}/listar`;
+    const endpoint = `${base_url}/Listar`;
     return this.http.get(`${endpoint}`);
   }
 
