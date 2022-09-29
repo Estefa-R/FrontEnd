@@ -27,9 +27,9 @@ export class EmpleadoService {
     return this.http.post(`${endpoint}/CrearEmpleado`, dataEmpleado);
   }
 
-  getFindByNombre(nombre: any): Observable<any> {
+  getFindByApellido(apellido: any): Observable<any> {
     const endpoint = `${base_url}`;
-    return this.http.get(`${endpoint}/BuscarPorNombre/${nombre}`);
+    return this.http.get(`${endpoint}/BuscarPorApellido/${apellido}`);
   }
 
 }

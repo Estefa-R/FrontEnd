@@ -57,12 +57,12 @@ processEmpleadoResponse(dataEmpleado: any[]){
   }
 
 
-  buscar( nombre: any){
-    if( nombre.length === 0){
+  buscar( apellido: any){
+    if( apellido.length === 0){
       return this.getAllEmpleado();
     }
 
-    this.empleadoService.getFindByNombre(nombre)
+    this.empleadoService.getFindByApellido(apellido)
       .subscribe( (resp: any) => {
         this.processEmpleadoResponse(resp);
       })
