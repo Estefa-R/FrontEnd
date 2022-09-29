@@ -4,8 +4,6 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSnackBar, MatSnackBarRef, SimpleSnackBar } from '@angular/material/snack-bar';
 import { MatTableDataSource } from '@angular/material/table';
 
-
-
 import { CargosService } from 'src/app/modules/shared/services/cargos.service';
 import { NewCargosComponent } from '../new-cargos/new-cargos.component';
 import { EmpleadoService } from '../../shared/services/empleado.service';
