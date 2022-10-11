@@ -49,10 +49,10 @@ openMercanciaDialog(){
 dialogRef.afterClosed().subscribe((result:any) => {
 
   if( result == 1){
-      this.openSnackBar("El nombre la mercancía ya existe en la base de datos", "Error");
+      this.openSnackBar("Mercancía Agregada", "Exitosamente ");
       this.getAllMercancia();
     } else if (result == 2) {
-      this.openSnackBar("Mercancía Agregada", "Exitosamente");
+      this.openSnackBar("El nombre la mercancía ya existe en la base de datos", "Error");
     }
   });
 }
