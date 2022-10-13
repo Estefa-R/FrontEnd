@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
-const base_url = environment.base_url + '/HistorialMercancia';
+const base_url = environment.base_url + '/AuditoriaSitioWeb';
 
 @Injectable({
   providedIn: 'root'
