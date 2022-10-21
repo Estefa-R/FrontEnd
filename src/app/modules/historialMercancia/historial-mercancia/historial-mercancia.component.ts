@@ -19,7 +19,7 @@ export class HistorialMercanciaComponent implements OnInit {
     this.getAllHistorialMercancia();
   }
 
-  displayedColumns: string[] = ['id', 'id_mercancia', 'id_empleado', 'fecha_modificacion'];
+  displayedColumns: string[] = ['id', 'nombre_empleado', 'nombre_mercancia', 'fecha', 'operacion'];
   dataSource = new MatTableDataSource<HistorialMercanciaElement>();
 
   @ViewChild(MatPaginator)
@@ -55,7 +55,8 @@ export class HistorialMercanciaComponent implements OnInit {
 
 export interface HistorialMercanciaElement {
   id: number;
-  id_mercancia: number;
-  id_empleado: number;
-  fecha_modificacion: Date;
+  nombre_empleado: String;
+  nombre_mercancia: String;
+  fecha: Date;
+  operacion: String;
 }
