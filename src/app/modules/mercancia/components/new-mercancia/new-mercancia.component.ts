@@ -28,7 +28,7 @@ export class NewMercanciaComponent implements OnInit {
     this.estadoFormulario = "Agregar";
 
     this.mercanciaForm = this.fb.group( {
-      nombre: ["", Validators.required],
+      nombre: ["", [Validators.required, Validators.pattern('^[a-zA-Z ]*$')]],
       cantidad: ["", Validators.required],
       id_empleado: ["", Validators.required],
       fecha_ingreso: ["", Validators.required]
