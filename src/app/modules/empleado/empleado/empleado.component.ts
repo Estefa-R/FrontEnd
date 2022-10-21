@@ -56,7 +56,6 @@ processEmpleadoResponse(dataEmpleado: any[]){
     });
   }
 
-
   buscar( apellido: any){
     if( apellido.length === 0){
       return this.getAllEmpleado();
@@ -72,9 +71,7 @@ processEmpleadoResponse(dataEmpleado: any[]){
     return this.snackBar.open(message, action, {
       duration: 2000
     })
-
   }
-
 }
   export interface EmpleadoElement{
     id: number;
