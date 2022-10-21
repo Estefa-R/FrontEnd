@@ -32,7 +32,7 @@ export class NewEmpleadoComponent implements OnInit {
       this.estadoFormulario = "Agregar";
 
       this.empleadoForm = this.fb.group( {
-        nombre: ['', Validators.required],
+        nombre: ["", [Validators.required, Validators.pattern('^[a-zA-Z ]*$')]],
         apellido: ['', Validators.required],
         edad: ['', Validators.required],
         id_cargo: ['', Validators.required],
