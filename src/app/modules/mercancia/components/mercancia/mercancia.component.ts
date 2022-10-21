@@ -46,28 +46,28 @@ openMercanciaDialog(){
   width: '450px'
   });
 
-dialogRef.afterClosed().subscribe((result:any) => {
-
-  if( result == 1){
-      this.openSnackBar("Mercancía Agregada", "Exitosamente ");
-      this.getAllMercancia();
-    } else if (result == 2) {
-      this.openSnackBar("El nombre la mercancía ya existe en la base de datos", "Error");
-    }
-  });
+  dialogRef.afterClosed().subscribe((result:any) => {
+    console.log(result);
+    if( result == 1){
+        this.openSnackBar("Mercancía Agregada", "Exitosamente ");
+        this.getAllMercancia();
+      } else if (result == 2) {
+        this.openSnackBar("Se produjo un error al guardar la mercancía", "Error");
+      }
+    });
 }
 
 updateMercancia(data: any){
-  const dialogRef = this.dialog.open(ActualizarMercanciaComponent , {
-    width: '450px',
-    data: { ...data }
-});
+    const dialogRef = this.dialog.open(ActualizarMercanciaComponent , {
+      width: '450px',
+      data: { ...data }
+  });
 
-dialogRef.afterClosed().subscribe((result:any) => {
-
+  dialogRef.afterClosed().subscribe((result:any) => {
     if( result == 1){
-        this.openSnackBar("Mercancía actualizada", "Exitosamente");
+        this.openSnackBar("Mercancía actualizada", "Exitosamente"  );
         this.getAllMercancia();
+
       } else if (result == 2) {
         this.openSnackBar("Se produjo un error al actualizar la mercancía", "Error");
       }
