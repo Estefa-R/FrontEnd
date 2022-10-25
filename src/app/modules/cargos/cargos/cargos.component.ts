@@ -67,7 +67,6 @@ openCargosDialog(){
   });
 
   dialogRef.afterClosed().subscribe((result:any) => {
-    console.log(result);
     if( result == 1){
       this.openSnackBar("Se agrego un nuevo cargo", "Exitosamente" );
       this.getAllCargos();
