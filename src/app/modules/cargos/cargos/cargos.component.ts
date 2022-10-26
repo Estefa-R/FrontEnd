@@ -67,10 +67,11 @@ openCargosDialog(){
   });
 
   dialogRef.afterClosed().subscribe((result:any) => {
-    if( result == 1){
+    console.log(result)
+    if( result == 2){
       this.openSnackBar("Se agrego un nuevo cargo", "Exitosamente" );
       this.getAllCargos();
-    } else if (result == 2) {
+    } else if (result == 1) {
       this.openSnackBar("Se produjo un error al guardar el cargo", "Error");
     }
   });
