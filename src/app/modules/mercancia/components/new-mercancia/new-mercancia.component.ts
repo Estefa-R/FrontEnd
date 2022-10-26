@@ -20,7 +20,7 @@ export class NewMercanciaComponent implements OnInit {
 
   constructor(private fb: FormBuilder, private mercanciaService: MercanciaService,
     private empleadoService: EmpleadoService,
-            private dialogRef: MatDialogRef<NewMercanciaComponent>,
+    private dialogRef: MatDialogRef<NewMercanciaComponent>,
 
             //Se obtiene información del componente padre
             @Inject(MAT_DIALOG_DATA) public dataMercancia: any) {
