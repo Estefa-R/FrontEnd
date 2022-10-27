@@ -48,7 +48,7 @@ processEmpleadoResponse(dataEmpleado: any[]){
     dialogRef.afterClosed().subscribe((result:any) => {
 
       if( result == 1){
-        this.openSnackBar("Empleado Agregado", "Exitosamente");
+        this.openSnackBar("Empleado agregado", "Exitosamente");
         this.getAllEmpleado();
       } else if (result == 2) {
         this.openSnackBar("Se produjo un error al guardar el empleado", "Error");

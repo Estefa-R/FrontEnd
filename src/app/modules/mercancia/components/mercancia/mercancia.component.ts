@@ -49,7 +49,7 @@ openMercanciaDialog(){
   dialogRef.afterClosed().subscribe((result:any) => {
     console.log(result);
     if( result == 1){
-        this.openSnackBar("Mercancía Agregada", "Exitosamente ");
+        this.openSnackBar("Mercancía agregada", "Exitosamente ");
         this.getAllMercancia();
       } else if (result == 2) {
         this.openSnackBar("Se produjo un error al guardar la mercancía", "Error");
