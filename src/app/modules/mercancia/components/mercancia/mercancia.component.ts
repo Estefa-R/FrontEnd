@@ -52,7 +52,7 @@ openMercanciaDialog(){
         this.openSnackBar("Mercancía agregada", "Exitosamente ");
         this.getAllMercancia();
       } else if (result == 2) {
-        this.openSnackBar("Se produjo un error al guardar la mercancía", "Error");
+        this.openSnackBar("El nombre de la mercancía existe en la base de datos", "NO se puede crear");
       }
     });
 }
