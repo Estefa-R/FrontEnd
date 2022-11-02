@@ -56,7 +56,7 @@
 
            <ng-container matColumnDef="fecha_ingreso_empresa">
               <th mat-header-cell *matHeaderCellDef> Fecha ingreso a la empresa </th>
-              <td mat-cell *matCellDef="let element"> {{ element.fecha_ingreso_empresa}}</td>
+              <td mat-cell *matCellDef="let element"> {{ element.fecha_ingreso_empresa | date:'shortDate'}}</td>
           </ng-container>
 
           <!-- actions-->
