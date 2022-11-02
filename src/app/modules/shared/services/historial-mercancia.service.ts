@@ -17,4 +17,9 @@ export class HistorialMercanciaService {
     return this.http.get(`${endpoint}`);
   }
 
+  getFindByNombre_Mercancia(nombre_mercancia: any): Observable<any> {
+    const endpoint = `${base_url}`;
+    return this.http.get(`${endpoint}/BuscarPorNombreMercancia/${nombre_mercancia}`);
+  }
+
 }

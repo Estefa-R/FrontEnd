@@ -39,18 +39,6 @@ export class HistorialMercanciaComponent implements OnInit {
     this.dataSource.paginator = this.paginator;
   }
 
-  buscar( id: any){
-
-    if( id.length === 0){
-    return this.getAllHistorialMercancia();
-    }
-
-    this.HistorialMercanciaService.getAllHistorialMercancia()
-      .subscribe( (resp: any) => {
-        this.processHistorialMercanciaElementResponse(resp);
-      })
-    }
-
 }
 
 export interface HistorialMercanciaElement {
