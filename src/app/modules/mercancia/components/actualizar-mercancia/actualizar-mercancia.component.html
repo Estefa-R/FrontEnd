@@ -1,0 +1,42 @@
+<h2 mat-dialog-title> {{ estadoFormulario }} mercancía </h2>
+<mat-dialog-content>
+
+  <form [formGroup]="actualizarForm">
+    <div class="actualizarForm-container">
+      <input type="hidden" formControlName="id">
+      <mat-form-field>
+          <input matInput placeholder="Nombre" formControlName="nombre" required/>
+      </mat-form-field>
+
+        <mat-form-field>
+        <input matInput type="number" placeholder="Cantidad" formControlName="cantidad" required />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Empleado</mat-label>
+        <mat-select formControlName="id_empleado">
+            <mat-option *ngFor="let empleado of empleados" [value]="empleado.id">
+              {{ empleado.nombre }}
+            </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Fecha de modificación</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="fecha_modificacion">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+    </div>
+  </form>
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+
+    <button mat-button color="primary" (click)="onSave()" [disabled]="actualizarForm.invalid"><mat-icon>save</mat-icon> Guardar</button>
+
+    <button mat-button color="primary" (click)="onCancel()"> Cancelar</button>
+
+</mat-dialog-actions>

@@ -1,0 +1,8 @@
+.mercancia-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.mercancia-container > * {
+  width: 100%;
+}

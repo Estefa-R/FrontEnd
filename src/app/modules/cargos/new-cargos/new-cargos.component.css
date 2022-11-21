@@ -1,0 +1,9 @@
+.cargos-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.cargos-container > * {
+  width: 100%;
+}
+

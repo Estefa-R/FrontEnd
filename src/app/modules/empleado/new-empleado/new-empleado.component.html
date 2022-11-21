@@ -1,0 +1,49 @@
+<h2 mat-dialog-title> {{ estadoFormulario }} nuevo empleado </h2>
+<mat-dialog-content>
+
+    <form [formGroup]="empleadoForm">
+        <div class="empleado-container">
+
+          <mat-form-field>
+            <mat-label>Cargos</mat-label>
+            <mat-select formControlName="id_cargo">
+                <mat-option *ngFor="let cargos of cargos" [value]="cargos.id">
+                  {{ cargos.cargo}}
+                </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+            <mat-form-field>
+                <input matInput placeholder="Nombre" formControlName="nombre" required/>
+            </mat-form-field>
+
+            <mat-form-field>
+              <input matInput placeholder="Apellido" formControlName="apellido" required/>
+            </mat-form-field>
+
+
+            <mat-form-field>
+                <input matInput type="number" placeholder="Edad" formControlName="edad" required />
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+              <mat-label>Fecha ingreso</mat-label>
+              <input matInput [matDatepicker]="picker" formControlName="fecha_ingreso_empresa">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+
+        </div>
+
+    </form>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+
+    <button mat-button color="primary" (click)="onSave()" [disabled]="empleadoForm.invalid">
+        <mat-icon>save</mat-icon> Guardar
+    </button>
+
+    <button mat-button color="primary" (click)="onCancel()"> Cancelar</button>
+
+</mat-dialog-actions>

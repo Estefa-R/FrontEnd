@@ -1,0 +1,22 @@
+<h2 mat-dialog-title> {{ estadoFormulario }} nuevo cargo </h2>
+<mat-dialog-content>
+
+    <form [formGroup]="cargosForm">
+        <div class="cargos-container">
+
+            <mat-form-field>
+                <input matInput placeholder="Nombre" formControlName="cargo" required/>
+            </mat-form-field>
+     </div>
+
+    </form>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+
+    <button mat-button color="primary" (click)="onSave()" [disabled]="cargosForm.invalid">
+        <mat-icon>save</mat-icon> Guardar</button>
+
+    <button mat-button color="primary" (click)="onCancel()"> Cancelar</button>
+
+</mat-dialog-actions>
